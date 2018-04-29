@@ -1,0 +1,22 @@
+decl
+	int m,n;
+enddecl
+int main(){
+	decl
+		int i,j,sum;
+	enddecl
+	begin
+		read(n);
+		read(m);
+		sum=0;
+		i=1;
+		j=1;
+		while(i<=m)do
+			j=j*n;
+			sum=sum+j;
+			i=i+1;
+		endwhile;
+		write(sum);
+		return 0;
+	end
+}

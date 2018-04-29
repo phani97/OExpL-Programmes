@@ -1,0 +1,6 @@
+type
+struct{
+	int x;
+	int y;
+}
+endtype

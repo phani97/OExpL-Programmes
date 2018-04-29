@@ -1,0 +1,45 @@
+class 
+c1{
+	int a;
+	int b;
+	int seta(int x){
+	begin
+		self.a=x;
+		return 1;
+		end
+	}
+	int geta(int x){
+		decl int y; enddecl
+		begin
+		y= self.seta(x);
+		return self.a;
+		end
+	}
+
+}
+endclass
+decl
+int n,m,add(int a,int b);
+c1 p1;
+enddecl
+int add(int a,int b)
+{
+    begin
+	return a+b;
+	end
+}
+int main()
+{
+    decl
+    int p,q;
+    enddecl
+	begin
+	p=initialize();
+	p1=new(c1);
+	read(q);
+	write(p1.geta(q));
+	n=3;
+	
+	return 0;
+	end
+}

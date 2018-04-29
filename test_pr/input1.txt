@@ -1,0 +1,17 @@
+
+decl
+  int n,n1;
+  int p;
+enddecl
+
+int main()
+{
+  begin
+  read(n);
+  while(n!=0)do
+    write(n);
+    n=n-1;
+  endwhile;
+  return 0;
+  end
+}

@@ -1,0 +1,36 @@
+decl
+	int n;
+	int fibanoci(int n);
+enddecl
+int fibanoci(int n){
+	decl
+		int f0,f1,f2,i;
+	enddecl
+	begin
+		if(n>=2) then
+			f0=0;
+			f1=1;
+			n=n-1;
+			while(n!=0) do
+				f2=f1+f0;
+				f0=f1;
+				f1=f2;
+				n=n-1;
+			endwhile;
+			write(f1);
+		else if(n==1) then 
+				write(1);
+			else write(0);
+			endif;
+		endif;
+		return 0;
+	end
+}
+int main(){
+	
+	begin
+		read(n);
+		n=fibanoci(n);
+		return 0;
+	end
+}

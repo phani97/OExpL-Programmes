@@ -1,0 +1,9 @@
+decl
+         int i,j,k;
+enddecl
+int main(){
+         begin
+                  write(10);
+                  return 0;
+         end
+}

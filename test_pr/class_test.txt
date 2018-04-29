@@ -1,0 +1,94 @@
+class
+A
+{
+  decl
+    int f1();
+    int f2();
+  enddecl
+  int f1() {
+      begin
+       write("In class A f1");
+       return 1;
+      end
+  }
+  int f2() {
+      begin
+        write("In class A f2");
+        return 1;
+      end
+  }
+}
+B extends A
+{
+  decl
+    int f1();
+    int f3();
+  enddecl
+int f1() {
+     begin
+       write("In class B f1");
+       return 1;
+     end
+}
+int f3() {
+     begin
+       write("In class B f3");
+       return 1;
+     end
+}
+}
+C extends B
+{
+  decl
+    int f1();
+    int f3();
+    int f4();
+  enddecl
+int f1() {
+     begin
+       write("In class C f1");
+       return 1;
+     end
+}
+int f3() {
+    begin
+       write("In class C f3");
+       return 1;
+    end
+}
+int f4() {
+    begin
+       write("In class C f4");
+       return 1;
+    end
+}
+}
+endclass
+
+decl
+A obj_a;
+B obj_b;
+C obj_c;
+int temp,n;
+enddecl
+
+int main() {
+  begin
+  temp= initialize();
+  read(n);
+  if(n<0)then
+    obj_a = new(A);
+  else
+    if(n==0)then
+      obj_a = new(B);
+      else
+        if(n>0)then
+          obj_a = new(C);
+        endif;
+    endif;
+  endif;
+
+  write(obj_a.f2());
+  return 1;
+  end
+}

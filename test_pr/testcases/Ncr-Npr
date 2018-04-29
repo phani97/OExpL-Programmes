@@ -1,0 +1,32 @@
+decl
+	int n,r;
+enddecl
+int main(){
+	decl
+		int i,c,p;
+	enddecl
+	begin
+		read(n);
+		read(r);
+		i=n;
+		c=1;
+		p=1;
+		if(n>=r)then
+			while(i>=n-r+1)do
+				c=c*i;
+				p=p*i;
+				i=i-1;
+			endwhile;
+			write(p);
+			i=2;
+			while(i<=r)do
+				c=c/i;
+				i=i+1;
+			endwhile;
+			write(c);
+		else
+			write("r can't be greater than n");
+		endif;
+		return 0;
+	end
+}

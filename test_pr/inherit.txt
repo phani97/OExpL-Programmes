@@ -1,0 +1,68 @@
+class
+
+A{
+	int a;
+	int b;
+	int set(int a,int b){
+	begin
+		self.a=a;
+		self.b=b;
+		return 1;
+	end
+	}
+	int geta(){
+	begin
+		return self.a;
+	end
+	}
+	int getb(){
+	begin
+		return self.b;
+	end
+	}
+}
+B extends A {
+	int c;
+	int set(int a,int b){
+	begin
+		read(self.a);
+		read(self.b);
+		read(self.c);
+		return 1;
+	end
+	}
+	int getc(){
+	begin
+		return self.c;
+	end
+	}
+}
+endclass
+
+decl
+	A a;
+	B b;
+enddecl
+
+int main(){
+	decl
+		int a1,b1,c1;
+	enddecl
+	begin
+		a1=initialize();
+		a=new(A);
+		a1=a.set(1,2);
+		write(a.geta());
+		write(a.getb());
+		a=new(B);
+		a1=a.set(10,12);
+		write(a.geta());
+		write(a.getb());
+		b=new(B);
+		b1=b.set(1,2);
+		write(b.geta());
+		write(b.getc());
+		write(b.getb());
+		return 1;
+	end
+}

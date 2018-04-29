@@ -1,0 +1,99 @@
+type
+struct{
+	int x;
+	int y;
+}
+endtype
+
+class 
+
+c1{
+	decl
+		int a;
+		struct s1;
+		c1 o1;
+		int set2(int r);
+		int geta();
+		int set(int a1,int a2,int a3);
+		int gets1(int x);
+		int findfact(int x);
+		int fun();
+	enddecl
+	int set2(int r){
+	begin
+		self.a=r;
+		return 1;
+		end
+	}
+	int geta(){
+	begin
+		return self.a;
+	end
+	}
+	int set(int a1,int a2,int a3){
+	decl
+		int g2;
+	enddecl
+	begin
+		self.o1=new(c1);
+		g2=self.o1.set2(12);
+		write(self.o1.geta());
+		self.a=a1;
+		g2=a1;
+		self.s1=alloc();
+		self.s1.x=a2+g2;
+		self.s1.y=a3*g2;
+		return 1;
+	end
+	}
+
+	int gets1(int x){
+	decl
+		int g2;
+	enddecl
+	begin
+		g2=x+self.s1.x;
+		return g2;
+	end
+	}
+	int findfact(int x){
+	decl
+		int a2;
+	enddecl
+	begin
+		if(x==1)then
+			a2=1;
+		else
+			a2= x*self.findfact(x-1);
+		endif;
+		return a2;
+	end
+	}
+	
+	int fun(){
+		begin
+		return self.findfact(self.o1.geta());
+		end
+	}
+
+	
+
+}
+endclass
+
+decl
+int f1,f2;
+c1 obj;
+enddecl
+int main(){
+	begin
+f1=initialize();
+obj=new(c1);
+f1=obj.set(6,3,4);
+f1=obj.geta();
+write(f1);
+f1=obj.findfact(5);
+write(f1);
+return 1;
+end
+}
