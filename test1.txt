@@ -1,0 +1,23 @@
+decl
+int n,m,add(int a,int b);
+enddecl
+int add(int a,int b)
+{
+    begin
+	return a+b;
+	end
+}
+int main()
+{
+    decl
+    int p,q;
+    enddecl
+	begin
+	read(q);
+	p = 2+3*add(q,1);
+	write(p);
+	p = 2+3*add(q,1);
+	write(p);
+	return 0;
+	end
+}

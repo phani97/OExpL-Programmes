@@ -1,0 +1,56 @@
+class
+ Person 
+{
+  int name;
+  int age; 
+  int printDetails() 
+  {
+   begin
+     write(self.name);
+     write(self.age); 
+     return 1; 
+   end
+  }
+
+ int findName() 
+  {
+
+  begin 
+    return (self.name); 
+  end 
+  }
+ int createPerson(int name, int age) 
+  { 
+  begin
+    self.name = name;
+    self.age = age; 
+    return 1; 
+  end
+  } 
+ }
+endclass 
+
+
+decl
+int n,m,add(int a,int b);
+person p1;
+enddecl
+int add(int a,int b)
+{
+    begin
+	return a+b;
+	end
+}
+int main()
+{
+    decl
+    int p,q,s1;
+    enddecl
+	begin
+	 p1=new(person);
+          q=p1.createPerson(s1,p);
+          q=p1.printDetails();
+	return 0;
+	end
+}
+
